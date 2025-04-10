@@ -1,0 +1,128 @@
+/* 🌐 Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🎨 Theme Variables */
+:root {
+  --primary: #4e73df;
+  --primary-dark: #2e59d9;
+  --background-gradient: linear-gradient(to right, #f4f4f9, #e0e7ff);
+  --light-bg: #ffffff;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  --input-border: #e0e0e0;
+  --hover-bg: #e2e6ea;
+  --list-bg: #f8f9fc;
+}
+
+/* 🖥 Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 📦 Container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--light-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* 🏷 Headings */
+h1 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ✍️ Form Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(78, 115, 223, 0.15);
+  outline: none;
+}
+
+/* 🚀 Button Styling */
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(78, 115, 223, 0.2);
+}
+
+/* 📋 List Styling */
+.item-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.item-list li {
+  background-color: var(--list-bg);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.item-list li:hover {
+  background-color: var(--hover-bg);
+}
+
+/* 📱 Responsive Tweak */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn, .input-field {
+    font-size: 14px;
+  }
+}
